@@ -46,6 +46,7 @@ require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
 # require "capistrano/rvm"
 # require "capistrano/rbenv"
+set :rbenv_ruby, '2.4.1'
 # require "capistrano/chruby"
 # require "capistrano/bundler"
 # require "capistrano/rails/assets"

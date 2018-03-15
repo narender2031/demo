@@ -6,6 +6,7 @@ set :repo_url, "git@github.com:narender2031/demo.git"
 set :user,     'deploy'
 set :rbenv_type, 'deploy'
 set :rbenv_ruby, '2.4.1'
+
 set :rbenv_prefix, "/home/deploy/.rbenv/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa) }
