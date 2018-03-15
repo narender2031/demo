@@ -4,7 +4,7 @@ lock "~> 3.10.1"
 set :application, "demo"
 set :repo_url, "git@github.com:narender2031/demo.git"
 set :user,     'deploy'
-set :rbenv_type, :user
+set :rbenv_type, 'deploy'
 set :rbenv_ruby, '2.2.6'
 set :rbenv_prefix, "/home/deploy/.rbenv/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
