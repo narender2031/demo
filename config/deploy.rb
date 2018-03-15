@@ -17,25 +17,23 @@ set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh
 # during deployment
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
+# namespace :rails do
+#   desc 'Open a rails console `cap [staging] rails:console [server_index default: 0]`'
+#   task :console do    
+#     server = roles(:app)[ARGV[2].to_i]
+
+#     puts "Opening a console on: #{server.hostname}...."
+
+#     cmd = "ssh #{fetch(:user)}@#{server.hostname} -t 'cd #{fetch(:deploy_to)}/current && RAILS_ENV=#{fetch(:rails_env)} bundle exec rails console'"
+
+#     puts cmd
+
+#     exec cmd
+#   end
+# end
+after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "if [ -f #{unicorn_pid} ]; then kill -s USR2 `cat #{unicorn_pid}`; fi"
-  end
-
-  task :force_restart, :roles => :app, :except => { :no_release => true } do
-    stop
-    start
-  end
-
-  task :stop, :roles => :app, :except => { :no_release => true } do
-    run "if [ -f #{unicorn_pid} ]; then kill -s QUIT `cat #{unicorn_pid}`; fi"
-  end
-
-  task :start, :roles => :app do
-    run "cd #{current_path} && #{unicorn_binary}"
-  end
-
-  task :symlink_database, :roles => :app do
-    run "cd #{current_path}/config && ln -s #{current_path}/../../shared/config/database.yml ."
+  task :restart do
+    invoke 'unicorn:restart'
   end
 end
