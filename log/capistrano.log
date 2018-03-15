@@ -13230,3 +13230,266 @@ Caused by:
   INFO [1ede81e9] Running /usr/bin/env echo "Branch master (at 8e5c5b1a13c9b46c4cf494d2e90170a74eb66794) deployed as release 20180315132852 by narender" >> /home/deploy/demo/revisions.log as deploy@13.126.252.2
  DEBUG [1ede81e9] Command: cd /home/deploy/demo/releases && /usr/bin/env echo "Branch master (at 8e5c5b1a13c9b46c4cf494d2e90170a74eb66794) deployed as release 20180315132852 by narender" >> /home/deploy/demo/revisions.log
   INFO [1ede81e9] Finished in 0.129 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-15 19:02:26 +0530 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2fe250ac] Running [ -d ~/.rvm ] as deploy@13.126.252.2
+ DEBUG [2fe250ac] Command: [ -d ~/.rvm ]
+ DEBUG [2fe250ac] Finished in 0.945 seconds with exit status 0 (successful).
+ DEBUG [4c3b7206] Running ~/.rvm/bin/rvm version as deploy@13.126.252.2
+ DEBUG [4c3b7206] Command: ~/.rvm/bin/rvm version
+ DEBUG [4c3b7206] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [4c3b7206] Finished in 0.318 seconds with exit status 0 (successful).
+ DEBUG [94e12035] Running ~/.rvm/bin/rvm current as deploy@13.126.252.2
+ DEBUG [94e12035] Command: ~/.rvm/bin/rvm current
+ DEBUG [94e12035] 	ruby-2.4.1
+ DEBUG [94e12035] Finished in 0.320 seconds with exit status 0 (successful).
+ DEBUG [3d161dde] Running ~/.rvm/bin/rvm default do ruby --version as deploy@13.126.252.2
+ DEBUG [3d161dde] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [3d161dde] 	ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+ DEBUG [3d161dde] Finished in 0.424 seconds with exit status 0 (successful).
+  INFO [c6854a1b] Running /usr/bin/env mkdir -p /tmp as deploy@13.126.252.2
+ DEBUG [c6854a1b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c6854a1b] Finished in 0.164 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-demo-production-narender.sh 0.0%
+  INFO Uploading /tmp/git-ssh-demo-production-narender.sh 100.0%
+  INFO [aec16b0e] Running /usr/bin/env chmod 700 /tmp/git-ssh-demo-production-narender.sh as deploy@13.126.252.2
+ DEBUG [aec16b0e] Command: /usr/bin/env chmod 700 /tmp/git-ssh-demo-production-narender.sh
+  INFO [aec16b0e] Finished in 0.173 seconds with exit status 0 (successful).
+  INFO [ac25f8b7] Running /usr/bin/env git ls-remote git@github.com:narender2031/demo.git HEAD as deploy@13.126.252.2
+ DEBUG [ac25f8b7] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-demo-production-narender.sh" ; /usr/bin/env git ls-remote git@github.com:narender2031/demo.git HEAD )
+ DEBUG [ac25f8b7] 	7b5997ef59430a48b790469faa55bca053ba9de3	HEAD
+  INFO [ac25f8b7] Finished in 3.052 seconds with exit status 0 (successful).
+  INFO [58afdeda] Running /usr/bin/env mkdir -p /home/deploy/demo/shared /home/deploy/demo/releases as deploy@13.126.252.2
+ DEBUG [58afdeda] Command: /usr/bin/env mkdir -p /home/deploy/demo/shared /home/deploy/demo/releases
+  INFO [58afdeda] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [c294164b] Running /usr/bin/env mkdir -p /home/deploy/demo/shared/bin /home/deploy/demo/shared/log /home/deploy/demo/shared/tmp/pids /home/deploy/demo/shared/tmp/cache /home/deploy/demo/shared/tmp/sockets /home/deploy/demo/shared/vendor/bundle /home/deploy/demo/shared/public/system /home/deploy/demo/shared/public/assets as deploy@13.126.252.2
+ DEBUG [c294164b] Command: /usr/bin/env mkdir -p /home/deploy/demo/shared/bin /home/deploy/demo/shared/log /home/deploy/demo/shared/tmp/pids /home/deploy/demo/shared/tmp/cache /home/deploy/demo/shared/tmp/sockets /home/deploy/demo/shared/vendor/bundle /home/deploy/demo/shared/public/system /home/deploy/demo/shared/public/assets
+  INFO [c294164b] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [05277f11] Running [ -f /home/deploy/demo/current/REVISION ] as deploy@13.126.252.2
+ DEBUG [05277f11] Command: [ -f /home/deploy/demo/current/REVISION ]
+ DEBUG [05277f11] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG [0100d760] Running /usr/bin/env cat /home/deploy/demo/current/REVISION 2>/dev/null as deploy@13.126.252.2
+ DEBUG [0100d760] Command: /usr/bin/env cat /home/deploy/demo/current/REVISION 2>/dev/null
+ DEBUG [0100d760] 	8e5c5b1a13c9b46c4cf494d2e90170a74eb66794
+ DEBUG [0100d760] Finished in 0.177 seconds with exit status 0 (successful).
+ DEBUG [20047166] Running [ -f /home/deploy/demo/repo/HEAD ] as deploy@13.126.252.2
+ DEBUG [20047166] Command: [ -f /home/deploy/demo/repo/HEAD ]
+ DEBUG [20047166] Finished in 0.170 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/demo/repo
+ DEBUG [9fa96ae1] Running if test ! -d /home/deploy/demo/repo; then echo "Directory does not exist '/home/deploy/demo/repo'" 1>&2; false; fi as deploy@13.126.252.2
+ DEBUG [9fa96ae1] Command: if test ! -d /home/deploy/demo/repo; then echo "Directory does not exist '/home/deploy/demo/repo'" 1>&2; false; fi
+ DEBUG [9fa96ae1] Finished in 0.167 seconds with exit status 0 (successful).
+  INFO [ff9cb998] Running /usr/bin/env git remote set-url origin git@github.com:narender2031/demo.git as deploy@13.126.252.2
+ DEBUG [ff9cb998] Command: cd /home/deploy/demo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-demo-production-narender.sh" ; /usr/bin/env git remote set-url origin git@github.com:narender2031/demo.git )
+  INFO [ff9cb998] Finished in 0.170 seconds with exit status 0 (successful).
+  INFO [7858aa1c] Running /usr/bin/env git remote update --prune as deploy@13.126.252.2
+ DEBUG [7858aa1c] Command: cd /home/deploy/demo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-demo-production-narender.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7858aa1c] 	Fetching origin
+ DEBUG [7858aa1c] 	From github.com:narender2031/demo
+ DEBUG [7858aa1c] 	   8e5c5b1..7b5997e  master     -> master
+  INFO [7858aa1c] Finished in 3.535 seconds with exit status 0 (successful).
+ DEBUG [0b461928] Running if test ! -d /home/deploy/demo/repo; then echo "Directory does not exist '/home/deploy/demo/repo'" 1>&2; false; fi as deploy@13.126.252.2
+ DEBUG [0b461928] Command: if test ! -d /home/deploy/demo/repo; then echo "Directory does not exist '/home/deploy/demo/repo'" 1>&2; false; fi
+ DEBUG [0b461928] Finished in 0.165 seconds with exit status 0 (successful).
+  INFO [b5f67af9] Running /usr/bin/env mkdir -p /home/deploy/demo/releases/20180315133233 as deploy@13.126.252.2
+ DEBUG [b5f67af9] Command: cd /home/deploy/demo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-demo-production-narender.sh" ; /usr/bin/env mkdir -p /home/deploy/demo/releases/20180315133233 )
+  INFO [b5f67af9] Finished in 0.166 seconds with exit status 0 (successful).
+  INFO [41850edb] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/demo/releases/20180315133233 as deploy@13.126.252.2
+ DEBUG [41850edb] Command: cd /home/deploy/demo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-demo-production-narender.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/deploy/demo/releases/20180315133233 )
+  INFO [41850edb] Finished in 0.185 seconds with exit status 0 (successful).
+ DEBUG [9f2e12fe] Running if test ! -d /home/deploy/demo/repo; then echo "Directory does not exist '/home/deploy/demo/repo'" 1>&2; false; fi as deploy@13.126.252.2
+ DEBUG [9f2e12fe] Command: if test ! -d /home/deploy/demo/repo; then echo "Directory does not exist '/home/deploy/demo/repo'" 1>&2; false; fi
+ DEBUG [9f2e12fe] Finished in 0.172 seconds with exit status 0 (successful).
+ DEBUG [aac14736] Running /usr/bin/env git rev-list --max-count=1 master as deploy@13.126.252.2
+ DEBUG [aac14736] Command: cd /home/deploy/demo/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-demo-production-narender.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [aac14736] 	7b5997ef59430a48b790469faa55bca053ba9de3
+ DEBUG [aac14736] Finished in 0.172 seconds with exit status 0 (successful).
+ DEBUG [651358e6] Running if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi as deploy@13.126.252.2
+ DEBUG [651358e6] Command: if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi
+ DEBUG [651358e6] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO [b00b1b33] Running /usr/bin/env echo "7b5997ef59430a48b790469faa55bca053ba9de3" >> REVISION as deploy@13.126.252.2
+ DEBUG [b00b1b33] Command: cd /home/deploy/demo/releases/20180315133233 && /usr/bin/env echo "7b5997ef59430a48b790469faa55bca053ba9de3" >> REVISION
+  INFO [b00b1b33] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [9b7d4903] Running /usr/bin/env mkdir -p /home/deploy/demo/releases/20180315133233 /home/deploy/demo/releases/20180315133233/tmp /home/deploy/demo/releases/20180315133233/vendor /home/deploy/demo/releases/20180315133233/public as deploy@13.126.252.2
+ DEBUG [9b7d4903] Command: /usr/bin/env mkdir -p /home/deploy/demo/releases/20180315133233 /home/deploy/demo/releases/20180315133233/tmp /home/deploy/demo/releases/20180315133233/vendor /home/deploy/demo/releases/20180315133233/public
+  INFO [9b7d4903] Finished in 0.167 seconds with exit status 0 (successful).
+ DEBUG [0a6796f9] Running [ -L /home/deploy/demo/releases/20180315133233/bin ] as deploy@13.126.252.2
+ DEBUG [0a6796f9] Command: [ -L /home/deploy/demo/releases/20180315133233/bin ]
+ DEBUG [0a6796f9] Finished in 0.166 seconds with exit status 1 (failed).
+ DEBUG [d3416c90] Running [ -d /home/deploy/demo/releases/20180315133233/bin ] as deploy@13.126.252.2
+ DEBUG [d3416c90] Command: [ -d /home/deploy/demo/releases/20180315133233/bin ]
+ DEBUG [d3416c90] Finished in 0.174 seconds with exit status 0 (successful).
+  INFO [89151745] Running /usr/bin/env rm -rf /home/deploy/demo/releases/20180315133233/bin as deploy@13.126.252.2
+ DEBUG [89151745] Command: /usr/bin/env rm -rf /home/deploy/demo/releases/20180315133233/bin
+  INFO [89151745] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [0a8ddedf] Running /usr/bin/env ln -s /home/deploy/demo/shared/bin /home/deploy/demo/releases/20180315133233/bin as deploy@13.126.252.2
+ DEBUG [0a8ddedf] Command: /usr/bin/env ln -s /home/deploy/demo/shared/bin /home/deploy/demo/releases/20180315133233/bin
+  INFO [0a8ddedf] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [3abc7816] Running [ -L /home/deploy/demo/releases/20180315133233/log ] as deploy@13.126.252.2
+ DEBUG [3abc7816] Command: [ -L /home/deploy/demo/releases/20180315133233/log ]
+ DEBUG [3abc7816] Finished in 0.176 seconds with exit status 1 (failed).
+ DEBUG [aad13eb6] Running [ -d /home/deploy/demo/releases/20180315133233/log ] as deploy@13.126.252.2
+ DEBUG [aad13eb6] Command: [ -d /home/deploy/demo/releases/20180315133233/log ]
+ DEBUG [aad13eb6] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [e364df1d] Running /usr/bin/env rm -rf /home/deploy/demo/releases/20180315133233/log as deploy@13.126.252.2
+ DEBUG [e364df1d] Command: /usr/bin/env rm -rf /home/deploy/demo/releases/20180315133233/log
+  INFO [e364df1d] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [e90e4eff] Running /usr/bin/env ln -s /home/deploy/demo/shared/log /home/deploy/demo/releases/20180315133233/log as deploy@13.126.252.2
+ DEBUG [e90e4eff] Command: /usr/bin/env ln -s /home/deploy/demo/shared/log /home/deploy/demo/releases/20180315133233/log
+  INFO [e90e4eff] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [1a97b4fc] Running [ -L /home/deploy/demo/releases/20180315133233/tmp/pids ] as deploy@13.126.252.2
+ DEBUG [1a97b4fc] Command: [ -L /home/deploy/demo/releases/20180315133233/tmp/pids ]
+ DEBUG [1a97b4fc] Finished in 0.164 seconds with exit status 1 (failed).
+ DEBUG [b7ab8f65] Running [ -d /home/deploy/demo/releases/20180315133233/tmp/pids ] as deploy@13.126.252.2
+ DEBUG [b7ab8f65] Command: [ -d /home/deploy/demo/releases/20180315133233/tmp/pids ]
+ DEBUG [b7ab8f65] Finished in 0.170 seconds with exit status 1 (failed).
+  INFO [334cb2ec] Running /usr/bin/env ln -s /home/deploy/demo/shared/tmp/pids /home/deploy/demo/releases/20180315133233/tmp/pids as deploy@13.126.252.2
+ DEBUG [334cb2ec] Command: /usr/bin/env ln -s /home/deploy/demo/shared/tmp/pids /home/deploy/demo/releases/20180315133233/tmp/pids
+  INFO [334cb2ec] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [7c174053] Running [ -L /home/deploy/demo/releases/20180315133233/tmp/cache ] as deploy@13.126.252.2
+ DEBUG [7c174053] Command: [ -L /home/deploy/demo/releases/20180315133233/tmp/cache ]
+ DEBUG [7c174053] Finished in 0.173 seconds with exit status 1 (failed).
+ DEBUG [4af8567b] Running [ -d /home/deploy/demo/releases/20180315133233/tmp/cache ] as deploy@13.126.252.2
+ DEBUG [4af8567b] Command: [ -d /home/deploy/demo/releases/20180315133233/tmp/cache ]
+ DEBUG [4af8567b] Finished in 0.170 seconds with exit status 1 (failed).
+  INFO [e4059233] Running /usr/bin/env ln -s /home/deploy/demo/shared/tmp/cache /home/deploy/demo/releases/20180315133233/tmp/cache as deploy@13.126.252.2
+ DEBUG [e4059233] Command: /usr/bin/env ln -s /home/deploy/demo/shared/tmp/cache /home/deploy/demo/releases/20180315133233/tmp/cache
+  INFO [e4059233] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG [003417ac] Running [ -L /home/deploy/demo/releases/20180315133233/tmp/sockets ] as deploy@13.126.252.2
+ DEBUG [003417ac] Command: [ -L /home/deploy/demo/releases/20180315133233/tmp/sockets ]
+ DEBUG [003417ac] Finished in 0.166 seconds with exit status 1 (failed).
+ DEBUG [a29602d3] Running [ -d /home/deploy/demo/releases/20180315133233/tmp/sockets ] as deploy@13.126.252.2
+ DEBUG [a29602d3] Command: [ -d /home/deploy/demo/releases/20180315133233/tmp/sockets ]
+ DEBUG [a29602d3] Finished in 0.168 seconds with exit status 1 (failed).
+  INFO [cdee5af9] Running /usr/bin/env ln -s /home/deploy/demo/shared/tmp/sockets /home/deploy/demo/releases/20180315133233/tmp/sockets as deploy@13.126.252.2
+ DEBUG [cdee5af9] Command: /usr/bin/env ln -s /home/deploy/demo/shared/tmp/sockets /home/deploy/demo/releases/20180315133233/tmp/sockets
+  INFO [cdee5af9] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [c97f0185] Running [ -L /home/deploy/demo/releases/20180315133233/vendor/bundle ] as deploy@13.126.252.2
+ DEBUG [c97f0185] Command: [ -L /home/deploy/demo/releases/20180315133233/vendor/bundle ]
+ DEBUG [c97f0185] Finished in 0.168 seconds with exit status 1 (failed).
+ DEBUG [215d6496] Running [ -d /home/deploy/demo/releases/20180315133233/vendor/bundle ] as deploy@13.126.252.2
+ DEBUG [215d6496] Command: [ -d /home/deploy/demo/releases/20180315133233/vendor/bundle ]
+ DEBUG [215d6496] Finished in 0.174 seconds with exit status 1 (failed).
+  INFO [4af659d7] Running /usr/bin/env ln -s /home/deploy/demo/shared/vendor/bundle /home/deploy/demo/releases/20180315133233/vendor/bundle as deploy@13.126.252.2
+ DEBUG [4af659d7] Command: /usr/bin/env ln -s /home/deploy/demo/shared/vendor/bundle /home/deploy/demo/releases/20180315133233/vendor/bundle
+  INFO [4af659d7] Finished in 0.170 seconds with exit status 0 (successful).
+ DEBUG [87a90dbd] Running [ -L /home/deploy/demo/releases/20180315133233/public/system ] as deploy@13.126.252.2
+ DEBUG [87a90dbd] Command: [ -L /home/deploy/demo/releases/20180315133233/public/system ]
+ DEBUG [87a90dbd] Finished in 0.163 seconds with exit status 1 (failed).
+ DEBUG [d9be6c2a] Running [ -d /home/deploy/demo/releases/20180315133233/public/system ] as deploy@13.126.252.2
+ DEBUG [d9be6c2a] Command: [ -d /home/deploy/demo/releases/20180315133233/public/system ]
+ DEBUG [d9be6c2a] Finished in 0.165 seconds with exit status 1 (failed).
+  INFO [405c97f5] Running /usr/bin/env ln -s /home/deploy/demo/shared/public/system /home/deploy/demo/releases/20180315133233/public/system as deploy@13.126.252.2
+ DEBUG [405c97f5] Command: /usr/bin/env ln -s /home/deploy/demo/shared/public/system /home/deploy/demo/releases/20180315133233/public/system
+  INFO [405c97f5] Finished in 0.173 seconds with exit status 0 (successful).
+ DEBUG [ac0d575a] Running [ -L /home/deploy/demo/releases/20180315133233/public/assets ] as deploy@13.126.252.2
+ DEBUG [ac0d575a] Command: [ -L /home/deploy/demo/releases/20180315133233/public/assets ]
+ DEBUG [ac0d575a] Finished in 0.132 seconds with exit status 1 (failed).
+ DEBUG [08cdf1b5] Running [ -d /home/deploy/demo/releases/20180315133233/public/assets ] as deploy@13.126.252.2
+ DEBUG [08cdf1b5] Command: [ -d /home/deploy/demo/releases/20180315133233/public/assets ]
+ DEBUG [08cdf1b5] Finished in 0.168 seconds with exit status 1 (failed).
+  INFO [5c83ac0f] Running /usr/bin/env ln -s /home/deploy/demo/shared/public/assets /home/deploy/demo/releases/20180315133233/public/assets as deploy@13.126.252.2
+ DEBUG [5c83ac0f] Command: /usr/bin/env ln -s /home/deploy/demo/shared/public/assets /home/deploy/demo/releases/20180315133233/public/assets
+  INFO [5c83ac0f] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [4eac5a5d] Running if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi as deploy@13.126.252.2
+ DEBUG [4eac5a5d] Command: if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi
+ DEBUG [4eac5a5d] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG [9e0e653f] Running ~/.rvm/bin/rvm default do bundle check --path /home/deploy/demo/shared/bundle as deploy@13.126.252.2
+ DEBUG [9e0e653f] Command: cd /home/deploy/demo/releases/20180315133233 && ~/.rvm/bin/rvm default do bundle check --path /home/deploy/demo/shared/bundle
+ DEBUG [9e0e653f] 	The following gems are missing
+ DEBUG [9e0e653f] 	 * net-ssh (4.2.0)
+ DEBUG [9e0e653f] 	 * net-scp (1.2.1)
+ DEBUG [9e0e653f] 	 * sshkit (1.16.0)
+ DEBUG [9e0e653f] 	 * airbrussh (1.3.0)
+ DEBUG [9e0e653f] 	 * bindex (0.5.0)
+ DEBUG [9e0e653f] 	 * byebug (10.0.0)
+ DEBUG [9e0e653f] 	 * capistrano (3.10.1)
+ DEBUG [9e0e653f] 	 * capistrano-bundler (1.3.0)
+ DEBUG [9e0e653f] 	 * capistrano-rails (1.1.8)
+ DEBUG [9e0e653f] 	 * capistrano-rvm (0.1.2)
+ DEBUG [9e0e653f] 	 * listen (3.0.8)
+ DEBUG [9e0e653f] 	 * spring (2.0.2)
+ DEBUG [9e0e653f] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [9e0e653f] 	 * web-console (3.5.1)
+ DEBUG [9e0e653f] 	Install missing gems with `bundle install`
+ DEBUG [9e0e653f] Finished in 0.703 seconds with exit status 1 (failed).
+  INFO [c166d6fb] Running ~/.rvm/bin/rvm default do bundle install --path /home/deploy/demo/shared/bundle --without development test --deployment --quiet as deploy@13.126.252.2
+ DEBUG [c166d6fb] Command: cd /home/deploy/demo/releases/20180315133233 && ~/.rvm/bin/rvm default do bundle install --path /home/deploy/demo/shared/bundle --without development test --deployment --quiet
+  INFO [c166d6fb] Finished in 1.959 seconds with exit status 0 (successful).
+ DEBUG [9d52c894] Running if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi as deploy@13.126.252.2
+ DEBUG [9d52c894] Command: if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi
+ DEBUG [9d52c894] Finished in 0.179 seconds with exit status 0 (successful).
+  INFO [3de70462] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as deploy@13.126.252.2
+ DEBUG [3de70462] Command: cd /home/deploy/demo/releases/20180315133233 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+  INFO [3de70462] Finished in 1.747 seconds with exit status 0 (successful).
+ DEBUG [21bb7fec] Running if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi as deploy@13.126.252.2
+ DEBUG [21bb7fec] Command: if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi
+ DEBUG [21bb7fec] Finished in 0.166 seconds with exit status 0 (successful).
+  INFO [3d76df09] Running /usr/bin/env mkdir -p /home/deploy/demo/releases/20180315133233/assets_manifest_backup as deploy@13.126.252.2
+ DEBUG [3d76df09] Command: cd /home/deploy/demo/releases/20180315133233 && /usr/bin/env mkdir -p /home/deploy/demo/releases/20180315133233/assets_manifest_backup
+  INFO [3d76df09] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG [2ce9927d] Running /usr/bin/env ls /home/deploy/demo/releases/20180315133233/public/assets/.sprockets-manifest* as deploy@13.126.252.2
+ DEBUG [2ce9927d] Command: cd /home/deploy/demo/releases/20180315133233 && /usr/bin/env ls /home/deploy/demo/releases/20180315133233/public/assets/.sprockets-manifest*
+ DEBUG [2ce9927d] 	/home/deploy/demo/releases/20180315133233/public/assets/.sprockets-manifest-c3db12b0b0e78308d29da71aaa6a1fff.json
+ DEBUG [2ce9927d] Finished in 0.166 seconds with exit status 0 (successful).
+ DEBUG [418055d8] Running /usr/bin/env ls /home/deploy/demo/releases/20180315133233/public/assets/.sprockets-manifest* as deploy@13.126.252.2
+ DEBUG [418055d8] Command: cd /home/deploy/demo/releases/20180315133233 && /usr/bin/env ls /home/deploy/demo/releases/20180315133233/public/assets/.sprockets-manifest*
+ DEBUG [418055d8] 	/home/deploy/demo/releases/20180315133233/public/assets/.sprockets-manifest-c3db12b0b0e78308d29da71aaa6a1fff.json
+ DEBUG [418055d8] Finished in 0.167 seconds with exit status 0 (successful).
+  INFO [3de4ecf1] Running /usr/bin/env cp /home/deploy/demo/releases/20180315133233/public/assets/.sprockets-manifest-c3db12b0b0e78308d29da71aaa6a1fff.json /home/deploy/demo/releases/20180315133233/assets_manifest_backup as deploy@13.126.252.2
+ DEBUG [3de4ecf1] Command: cd /home/deploy/demo/releases/20180315133233 && /usr/bin/env cp /home/deploy/demo/releases/20180315133233/public/assets/.sprockets-manifest-c3db12b0b0e78308d29da71aaa6a1fff.json /home/deploy/demo/releases/20180315133233/assets_manifest_backup
+  INFO [3de4ecf1] Finished in 0.164 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [d353a185] Running if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi as deploy@13.126.252.2
+ DEBUG [d353a185] Command: if test ! -d /home/deploy/demo/releases/20180315133233; then echo "Directory does not exist '/home/deploy/demo/releases/20180315133233'" 1>&2; false; fi
+ DEBUG [d353a185] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [c76925a8] Running ~/.rvm/bin/rvm default do bundle exec rake db:migrate as deploy@13.126.252.2
+ DEBUG [c76925a8] Command: cd /home/deploy/demo/releases/20180315133233 && ( export RAILS_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec rake db:migrate )
+  INFO [c76925a8] Finished in 1.790 seconds with exit status 0 (successful).
+  INFO [25d58762] Running /usr/bin/env ln -s /home/deploy/demo/releases/20180315133233 /home/deploy/demo/releases/current as deploy@13.126.252.2
+ DEBUG [25d58762] Command: /usr/bin/env ln -s /home/deploy/demo/releases/20180315133233 /home/deploy/demo/releases/current
+  INFO [25d58762] Finished in 0.169 seconds with exit status 0 (successful).
+  INFO [48490c84] Running /usr/bin/env mv /home/deploy/demo/releases/current /home/deploy/demo as deploy@13.126.252.2
+ DEBUG [48490c84] Command: /usr/bin/env mv /home/deploy/demo/releases/current /home/deploy/demo
+  INFO [48490c84] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG [86e3e61a] Running /usr/bin/env ls -x /home/deploy/demo/releases as deploy@13.126.252.2
+ DEBUG [86e3e61a] Command: /usr/bin/env ls -x /home/deploy/demo/releases
+ DEBUG [86e3e61a] 	20180315130111	20180315130513	20180315130910	20180315132428	20180315132852
+20180315133233
+ DEBUG [86e3e61a] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 13.126.252.2
+ DEBUG [33976ba8] Running [ -d /home/deploy/demo/current ] as deploy@13.126.252.2
+ DEBUG [33976ba8] Command: [ -d /home/deploy/demo/current ]
+ DEBUG [33976ba8] Finished in 0.166 seconds with exit status 0 (successful).
+ DEBUG [12f0616d] Running /usr/bin/env readlink /home/deploy/demo/current as deploy@13.126.252.2
+ DEBUG [12f0616d] Command: /usr/bin/env readlink /home/deploy/demo/current
+ DEBUG [12f0616d] 	/home/deploy/demo/releases/20180315133233
+ DEBUG [12f0616d] Finished in 0.188 seconds with exit status 0 (successful).
+  INFO [a534bbc2] Running /usr/bin/env rm -rf /home/deploy/demo/releases/20180315130111 as deploy@13.126.252.2
+ DEBUG [a534bbc2] Command: /usr/bin/env rm -rf /home/deploy/demo/releases/20180315130111
+  INFO [a534bbc2] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [89f2d841] Running if test ! -d /home/deploy/demo/releases; then echo "Directory does not exist '/home/deploy/demo/releases'" 1>&2; false; fi as deploy@13.126.252.2
+ DEBUG [89f2d841] Command: if test ! -d /home/deploy/demo/releases; then echo "Directory does not exist '/home/deploy/demo/releases'" 1>&2; false; fi
+ DEBUG [89f2d841] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [58bf0252] Running /usr/bin/env echo "Branch master (at 7b5997ef59430a48b790469faa55bca053ba9de3) deployed as release 20180315133233 by narender" >> /home/deploy/demo/revisions.log as deploy@13.126.252.2
+ DEBUG [58bf0252] Command: cd /home/deploy/demo/releases && /usr/bin/env echo "Branch master (at 7b5997ef59430a48b790469faa55bca053ba9de3) deployed as release 20180315133233 by narender" >> /home/deploy/demo/revisions.log
+  INFO [58bf0252] Finished in 0.167 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-03-15 19:20:49 +0530 cap production deploy:restart
+  INFO ---------------------------------------------------------------------------
+ DEBUG [32ccc75d] Running [ -d ~/.rvm ] as deploy@13.126.252.2
+ DEBUG [32ccc75d] Command: [ -d ~/.rvm ]
+ DEBUG [32ccc75d] Finished in 0.803 seconds with exit status 0 (successful).
+ DEBUG [ce23b7d5] Running ~/.rvm/bin/rvm version as deploy@13.126.252.2
+ DEBUG [ce23b7d5] Command: ~/.rvm/bin/rvm version
+ DEBUG [ce23b7d5] 	rvm 1.29.3 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [ce23b7d5] Finished in 0.320 seconds with exit status 0 (successful).
+ DEBUG [2413c03f] Running ~/.rvm/bin/rvm current as deploy@13.126.252.2
+ DEBUG [2413c03f] Command: ~/.rvm/bin/rvm current
+ DEBUG [2413c03f] 	ruby-2.4.1
+ DEBUG [2413c03f] Finished in 0.316 seconds with exit status 0 (successful).
+ DEBUG [e4a1ed45] Running ~/.rvm/bin/rvm default do ruby --version as deploy@13.126.252.2
+ DEBUG [e4a1ed45] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [e4a1ed45] 	ruby 2.4.1p111 (2017-03-22 revision 58053) [x86_64-linux]
+ DEBUG [e4a1ed45] Finished in 0.508 seconds with exit status 0 (successful).
