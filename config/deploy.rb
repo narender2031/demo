@@ -1,7 +1,10 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.10.1"
 
-set :rbenv_type, 'deploy'
+set :application, "demo"
+set :repo_url, "git@github.com:narender2031/demo.git"
+set :user,     'deploy'
+set :rbenv_type, :user
 set :rbenv_ruby, '2.2.6'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}

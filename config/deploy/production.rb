@@ -85,7 +85,7 @@ set :stage, :production
 set :branch, "master"
 # the user login on the remote server
 # used to connect and deploy
-set :deploy_user, "YourAzureVMUserName"
+set :deploy_user, "deploy"
 # the 'full name' of the application
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 # the server(s) to deploy to

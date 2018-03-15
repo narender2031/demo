@@ -1,5 +1,5 @@
 # Load DSL and set up stages
-require 'capistrano/unicorn_nginx'
+
 require "capistrano/setup"
 
 # Include default deployment tasks
