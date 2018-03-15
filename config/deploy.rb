@@ -7,7 +7,7 @@ set :deploy_to, '/home/deploy/demo'
 set :log_level, :debug
  
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
- 
+set :ssh_options,     { forward_agent: true, user: 'deploy', keys: %w(~/.ssh/id_rsa) }
 #set :bundle_env_variables, { nokogiri_use_system_libraries: 1 }
 #set :bundle_env_variables, { ‘NOKOGIRI_USE_SYSTEM_LIBRARIES’ => 1 }
 namespace :deploy do

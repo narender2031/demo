@@ -31,7 +31,7 @@ require 'capistrano/deploy'
 require 'capistrano/rbenv'
  
 set :rbenv_type, :user
-set :rbenv_ruby, '2.2.3'
+set :rbenv_ruby, '2.2.6'
  
 require 'capistrano/rails'
 require 'capistrano/rails/assets'

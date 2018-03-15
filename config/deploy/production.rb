@@ -64,14 +64,14 @@ set :unicorn_rack_env, 'development'
 set :rails_env, 'development'
 set :migration_role, 'db'
  
-role :app, %w{ec2–111111.compute-1.amazonaws.com} # Server IP Address
-role :web, %w{ec2–111111.compute-1.amazonaws.com}
-role :db, %w{ec2–111111.compute-1.amazonaws.com}
+role :app, %w{ec2-13-126-252-2.ap-south-1.compute.amazonaws.com} # Server IP Address
+role :web, %w{ec2-13-126-252-2.ap-south-1.compute.amazonaws.com}
+role :db, %w{ec2-13-126-252-2.ap-south-1.compute.amazonaws.com}
  
 set :ssh_options, {
-keys: [File.expand_path('~/.ssh/capistrano.pem')],
+keys: [File.expand_path('~/.ssh/meetingruby.pem')],
 forward_agent: true,
 auth_methods: %w(publickey)
 }
  
-server 'ec2–111111.compute-1.amazonaws.com', user: 'ubuntu', roles: %w{web app db}
+server 'ec2-13-126-252-2.ap-south-1.compute.amazonaws.com', user: 'ubuntu', roles: %w{web app db}
