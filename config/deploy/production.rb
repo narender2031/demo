@@ -80,7 +80,7 @@
 
 # server '', roles: [:web, :app, :db], primary: true
 # production deployment
-set :ssh_options,     { forward_agent: true, user: 'deploy', keys: %w(/home/deploy/.aws/meeting/meeting.pem) }
+set :ssh_options,     { forward_agent: true, user: 'deploy', keys: %w(~/.ssh/id_rsa) }
 set :stage, :production
 # use the master branch of the repository
 set :branch, "master"

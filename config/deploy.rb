@@ -5,10 +5,10 @@ set :application, "demo"
 set :repo_url, "git@github.com:narender2031/demo.git"
 set :user,     'deploy'
 set :rbenv_type, 'deploy'
-set :rbenv_ruby, '2.2.6'
+set :rbenv_ruby, '2.4.1'
 set :rbenv_prefix, "/home/deploy/.rbenv/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
-set :ssh_options,     { forward_agent: true, user: 'deploy', keys: %w(/home/deploy/.aws/meeting/meeting.pem) }
+set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa) }
 # dirs we want symlinked to the shared folder
 # during deployment
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
