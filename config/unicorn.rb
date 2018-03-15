@@ -1,4 +1,4 @@
-# working_directory "/home/deploy/demo/current"
+working_directory "/home/deploy/demo/current"
 pid "/home/deploy/demo/current/tmp/pids/unicorn.pid"
 stderr_path "/home/deploy/demo/current/log/unicorn.log"
 stdout_path "/home/deploy/demo/current/log/unicorn.log"
