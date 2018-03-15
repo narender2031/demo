@@ -80,19 +80,26 @@
 
 # server '', roles: [:web, :app, :db], primary: true
 # production deployment
-set :ssh_options,     { forward_agent: true, user: 'deploy', keys: %w(~/.ssh/id_rsa) }
-set :stage, :production
-# use the master branch of the repository
-set :branch, "master"
-# the user login on the remote server
-# used to connect and deploy
-set :deploy_user, "deploy"
-# the 'full name' of the application
-set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
+
+
+
+
+
+
+
+# set :ssh_options,     { forward_agent: true, user: 'deploy', keys: %w(~/.ssh/id_rsa) }
+# set :stage, :production
+# # use the master branch of the repository
+# set :branch, "master"
+# # the user login on the remote server
+# # used to connect and deploy
+# set :deploy_user, "deploy"
+# # the 'full name' of the application
+# set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 # the server(s) to deploy to
 
-server '13.126.252.2', user: 'deploy', roles: %w{web app db}, primary: true
+server '13.126.252.2', user: 'deploy', roles: ["app", "db", "web"]
 # the path to deploy to
-set :deploy_to, "/home/#{fetch(:deploy_user)}/demo/current/#{fetch(:full_app_name)}"
-# set to production for Rails
-set :rails_env, :production
+# set :deploy_to, "/home/#{fetch(:deploy_user)}/demo/current/#{fetch(:full_app_name)}"
+# # set to production for Rails
+# set :rails_env, :production

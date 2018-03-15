@@ -3,7 +3,9 @@ lock "~> 3.10.1"
 
 set :application, "demo"
 set :repo_url, "git@github.com:narender2031/demo.git"
+set :deploy_user, "deploy"
 set :user,     'deploy'
+set :deploy_to, "/home/#{fetch :deploy_user}/#{fetch :application}"
 # set :rbenv_type, 'deploy'
 # set :rbenv_ruby, '2.4.1'
 #  set :rbenv_path, '/home/deploy/.rbenv/'
