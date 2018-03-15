@@ -45,7 +45,8 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
-  gem 'capistrano'
+  gem 'capistrano', '~> 3.6.1'
+  gem 'capistrano-unicorn-nginx', '~> 4.1.0'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'

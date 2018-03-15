@@ -59,21 +59,23 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-set :user,  'deploy'
-set :stage,      :production
-set :unicorn_rack_env, 'stage'
-set :rails_env, 'stage'
-set :migration_role, 'db'
-server '13.126.252.2', roles: [:web, :app, :db], primary: true
+# set :user,  'deploy'
+# set :stage,      :production
+# set :unicorn_rack_env, 'stage'
+# set :rails_env, 'stage'
+# set :migration_role, 'db'
+# # server '13.126.252.2', roles: [:web, :app, :db], primary: true
 # role :app, %w{ec2-13-126-252-2.ap-south-1.compute.amazonaws.com} # Server IP Address
 # role :web, %w{ec2-13-126-252-2.ap-south-1.compute.amazonaws.com}
 # role :db, %w{ec2-13-126-252-2.ap-south-1.compute.amazonaws.com}
 # set :ssh_options,     { forward_agent: true, user: 'deploy', keys: %w(~/.ssh/id_rsa) }
-set :ssh_options, {
-keys: [File.expand_path('~/.ssh/meeting.pem')],
-forward_agent: true,
-user: 'deploy',
-auth_methods: %w(publickey)
-}
-server '13.126.252.2', roles: [:web, :app, :db], primary: true
+# set :ssh_options, {
+# keys: [File.expand_path('~/.ssh/meeting.pem')],
+# forward_agent: true,
+# user: 'deploy',
+# auth_methods: %w(publickey)
+# }
+# # server '13.126.252.2', roles: [:web, :app, :db], primary: true
 # server 'ec2-13-126-252-2.ap-south-1.compute.amazonaws.com', user: 'ubuntu', roles: %w{web app db}
+
+server '13.126.252.2', user: 'deploy', roles: %w{web app db}
