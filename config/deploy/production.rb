@@ -78,4 +78,19 @@
 # # server '13.126.252.2', roles: [:web, :app, :db], primary: true
 # server 'ec2-13-126-252-2.ap-south-1.compute.amazonaws.com', user: 'ubuntu', roles: %w{web app db}
 
-server '13.126.252.2', user: 'deploy', roles: %w{web app db}
+server '', roles: [:web, :app, :db], primary: true
+# production deployment
+set :stage, :production
+# use the master branch of the repository
+set :branch, "master"
+# the user login on the remote server
+# used to connect and deploy
+set :deploy_user, "YourAzureVMUserName"
+# the 'full name' of the application
+set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
+# the server(s) to deploy to
+server '139.59.80.132', user: 'deploy', roles: %w{web app db}, primary: true
+# the path to deploy to
+set :deploy_to, "/home/#{fetch(:deploy_user)}/demo/current/#{fetch(:full_app_name)}"
+# set to production for Rails
+set :rails_env, :production
