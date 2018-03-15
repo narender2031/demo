@@ -30,7 +30,7 @@ require 'capistrano/setup'
 require 'capistrano/deploy'
 require 'capistrano/rbenv'
  
-set :rbenv_type, :user
+set :rbenv_type, 'deploy'
 set :rbenv_ruby, '2.2.6'
  
 require 'capistrano/rails'

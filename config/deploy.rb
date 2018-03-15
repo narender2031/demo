@@ -3,7 +3,8 @@ lock "~> 3.10.1"
 
 set :application, "demo"
 set :repo_url, "git@github.com:narender2031/demo.git"
-set :deploy_to, '/home/deploy/demo'
+set :user,  'deploy'
+set :deploy_to, '/home/deploy/demo/current'
 set :log_level, :debug
  
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
