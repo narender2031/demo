@@ -98,7 +98,7 @@
 # set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 # the server(s) to deploy to
 
-server '13.126.252.2', user: 'deploy', roles: ["app", "db", "web"]
+server '52.91.226.179', user: 'deploy', roles: ["app", "db", "web"]
 # the path to deploy to
 # set :deploy_to, "/home/#{fetch(:deploy_user)}/demo/current/#{fetch(:full_app_name)}"
 # # set to production for Rails
